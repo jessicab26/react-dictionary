@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Definition from "./Definition";
+import ImageSearch from "./ImageSearch";
 
 import "./App.css";
 
 export default function Search() {
+  let [keyword, setKeyword] = useState(" ");
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    alert(`Searching for ${keyword}`);
+  }
+  function textChange(event) {
+    setKeyword(event.target.value);
+  }
+
   return (
     <div className="Search">
-      <form className="d-flex justify-content-center">
+      <form className="d-flex justify-content-center" onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-11">
             <input
@@ -16,6 +27,7 @@ export default function Search() {
               autoCorrect="on"
               placeholder="Search a word..."
               autofocus="on"
+              onChange={textChange}
             />
           </div>
           <div className="col-1">
@@ -24,6 +36,7 @@ export default function Search() {
         </div>
       </form>
       <Definition />
+      <ImageSearch />
     </div>
   );
 }
