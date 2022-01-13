@@ -16,7 +16,8 @@ export default function Search() {
     event.preventDefault();
     alert(`Searching for ${keyword}`);
 
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
+    const apiKey = "d7da3f99-8adc-47a2-9c15-842b5be5c2d4";
+    let apiUrl = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${keyword}?key=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
   }
 
