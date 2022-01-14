@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Definition from "./Definition";
+import ArtWork from "./ArtWork";
 import axios from "axios";
 
 import "./App.css";
@@ -9,7 +10,8 @@ export default function Search(props) {
   let [results, setResults] = useState(null);
 
   function handleResponse(response) {
-    setResults(response.data[0]);
+    console.log(response);
+    setResults(response.data[0].shortdef);
   }
 
   function handleSubmit(event) {
@@ -46,6 +48,7 @@ export default function Search(props) {
         </div>
       </form>
       <Definition results={results} />
+      <ArtWork />
     </div>
   );
 }
