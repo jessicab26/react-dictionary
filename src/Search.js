@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import Definition from "./Definition";
-import ImageSearch from "./ImageSearch";
 import axios from "axios";
 
 import "./App.css";
 
-export default function Search() {
+export default function Search(props) {
   let [keyword, setKeyword] = useState(" ");
+  let [results, setResults] = useState(null);
 
   function handleResponse(response) {
-    console.log(response);
+    setResults(response.data[0]);
   }
 
   function handleSubmit(event) {
@@ -45,8 +45,7 @@ export default function Search() {
           </div>
         </div>
       </form>
-      <Definition />
-      <ImageSearch />
+      <Definition results={results} />
     </div>
   );
 }

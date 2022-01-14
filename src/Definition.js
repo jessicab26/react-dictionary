@@ -1,10 +1,7 @@
 import React from "react";
+import Search from "./Search";
 
-export default function Definition() {
-  return (
-    <div className="Definition">
-      <p>phonetics</p>
-      <h4>definition of word</h4>
-    </div>
-  );
+export default function Definition(props) {
+  console.log(props.results);
+  return <div className="Definition">{props.results.shortdef[0]}</div>;
 }
