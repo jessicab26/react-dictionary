@@ -11,12 +11,18 @@ export default function Search(props) {
 
   function handleResponse(response) {
     console.log(response);
-    setResults(response.data[0].shortdef);
+    setResults({
+      definitionOne: response.data[0].shortdef[0],
+      definitionTwo: response.data[0].shortdef[1],
+      definitionThree: response.data[0].shortdef[2],
+      headword: response.data[0].hwi.hw,
+      label: response.data[0].fl,
+      pronunciation: response.data[0].hwi.prs[0].mw,
+    });
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    alert(`Searching for ${keyword}`);
 
     const apiKey = "d7da3f99-8adc-47a2-9c15-842b5be5c2d4";
     let apiUrl = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${keyword}?key=${apiKey}`;
