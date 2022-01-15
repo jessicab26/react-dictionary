@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Definition from "./Definition";
-import ArtWork from "./ArtWork";
 import axios from "axios";
 
 import "./App.css";
@@ -54,7 +53,6 @@ export default function Search(props) {
         </div>
       </form>
       <Definition results={results} />
-      <ArtWork />
     </div>
   );
 }
