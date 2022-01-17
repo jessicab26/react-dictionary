@@ -34,7 +34,7 @@ export default function Search(props) {
 
   return (
     <div className="Search">
-      <form className="d-flex justify-content-center" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-11">
             <input

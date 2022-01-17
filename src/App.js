@@ -5,12 +5,16 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <header>
-        <h1>Dictionary</h1>
-      </header>
       <div className="container">
+        <header>Dictionary</header>
         <Search />
       </div>
+      <footer>
+        <a href="https://github.com/jessicab26/react-dictionary">
+          Open-source code
+        </a>{" "}
+        by <em>Jessica Brogden</em>
+      </footer>
     </div>
   );
 }

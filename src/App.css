@@ -1,4 +1,17 @@
-.App {
-  background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+.App header {
+  font-size: 85px;
   text-align: center;
+  padding-bottom: 40px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 150px;
 }

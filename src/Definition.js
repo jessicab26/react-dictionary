@@ -7,12 +7,13 @@ export default function Definition(props) {
   if (props.results) {
     return (
       <div className="Definition">
-        <span>{props.results.headword}</span> <span>{props.results.label}</span>
+        <span className="headword">{props.results.headword}</span>{" "}
+        <span className="label">{props.results.label}</span>
         <div>
           <h5>\ {props.results.pronunciation}\</h5>
         </div>
-        <div>
-          Definition of <em>{props.results.headword}</em>
+        <div className="meanings">
+          Definition(s) of <em>{props.results.headword}</em>
         </div>
         <ol>
           <li>{props.results.definitionOne}</li>
