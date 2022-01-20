@@ -9,22 +9,14 @@ export default function Search(props) {
   let [results, setResults] = useState(null);
 
   function handleResponse(response) {
-    setResults({
-      definitionOne: response.data[0].shortdef[0],
-      definitionTwo: response.data[0].shortdef[1],
-      definitionThree: response.data[0].shortdef[2],
-      headword: response.data[0].hwi.hw,
-      label: response.data[0].fl,
-      pronunciation: response.data[0].hwi.prs[0].mw,
-      synonyms: response.data[0].syns[0].pt[0],
-    });
+    console.log(response);
+    setResults(response.data[0]);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
 
-    const apiKey = "d7da3f99-8adc-47a2-9c15-842b5be5c2d4";
-    let apiUrl = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${keyword}?key=${apiKey}`;
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
   }
 

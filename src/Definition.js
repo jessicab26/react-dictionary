@@ -7,20 +7,11 @@ export default function Definition(props) {
   if (props.results) {
     return (
       <div className="Definition">
-        <span className="headword">{props.results.headword}</span>{" "}
-        <span className="label">{props.results.label}</span>
-        <div>
-          <h5>\ {props.results.pronunciation}\</h5>
-        </div>
-        <div className="meanings">
-          Definition(s) of <em>{props.results.headword}</em>
-        </div>
-        <ol>
-          <li>{props.results.definitionOne}</li>
-          <li>{props.results.definitionTwo}</li>
-          <li>{props.results.definitionThree}</li>
-        </ol>
-        <Synonyms synonyms={props.results.synonyms} />
+        <span className="headword">{props.results.word}</span>
+        <span>{props.results.meanings[0].partOfSpeech}</span>
+        <p>
+          <strong>\ ` {props.results.phonetic} ` \</strong>
+        </p>
       </div>
     );
   } else {
