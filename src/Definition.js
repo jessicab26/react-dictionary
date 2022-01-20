@@ -1,4 +1,5 @@
 import React from "react";
+import Synonyms from "./Synonyms";
 
 import "./Definition.css";
 
@@ -19,6 +20,7 @@ export default function Definition(props) {
           <li>{props.results.definitionTwo}</li>
           <li>{props.results.definitionThree}</li>
         </ol>
+        <Synonyms synonyms={props.results.synonyms} />
       </div>
     );
   } else {

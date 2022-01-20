@@ -9,7 +9,6 @@ export default function Search(props) {
   let [results, setResults] = useState(null);
 
   function handleResponse(response) {
-    console.log(response);
     setResults({
       definitionOne: response.data[0].shortdef[0],
       definitionTwo: response.data[0].shortdef[1],
@@ -17,6 +16,7 @@ export default function Search(props) {
       headword: response.data[0].hwi.hw,
       label: response.data[0].fl,
       pronunciation: response.data[0].hwi.prs[0].mw,
+      synonyms: response.data[0].syns[0].pt[0],
     });
   }
 
