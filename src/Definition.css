@@ -7,6 +7,19 @@
 .headword::first-letter {
   text-transform: capitalize;
 }
+span.sentence {
+  display: inline-block;
+}
+span.sentence::first-letter {
+  text-transform: capitalize;
+}
+ul.Synonyms {
+  display: inline-block;
+  font-size: 10px;
+}
+ul.Synonyms::first-letter {
+  text-transform: capitalize;
+}
 
 .label {
   opacity: 0.6;
