@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Definition from "./Definition";
+import Summary from "./Summary";
 import axios from "axios";
 
 import "./App.css";
@@ -44,7 +44,7 @@ export default function Search(props) {
           </div>
         </div>
       </form>
-      <Definition results={results} />
+      <Summary results={results} />
     </div>
   );
 }

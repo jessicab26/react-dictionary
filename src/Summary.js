@@ -1,17 +1,25 @@
 import React from "react";
 import Synonyms from "./Synonyms";
+import Meaning from "./Meaning";
 
 import "./Definition.css";
 
-export default function Definition(props) {
+export default function Summary(props) {
   if (props.results) {
     return (
-      <div className="Definition">
+      <div className="Summary">
         <span className="headword">{props.results.word}</span>
-        <span>{props.results.meanings[0].partOfSpeech}</span>
         <p>
           <strong>\ ` {props.results.phonetic} ` \</strong>
         </p>
+
+        {props.results.meanings.map(function (meaning, index) {
+          return (
+            <div key={index}>
+              <Meaning meaning={meaning} />
+            </div>
+          );
+        })}
       </div>
     );
   } else {
