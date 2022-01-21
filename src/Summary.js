@@ -1,5 +1,6 @@
 import React from "react";
 import Meaning from "./Meaning";
+import Phonetics from "./Phonetics";
 
 import "./Definition.css";
 
@@ -8,9 +9,7 @@ export default function Summary(props) {
     return (
       <div className="Summary">
         <span className="headword">{props.results.word}</span>
-        <p>
-          <strong>\ ` {props.results.phonetic} ` \</strong>
-        </p>
+        <Phonetics phonetics={props.results.phonetics} />
 
         {props.results.meanings.map(function (meaning, index) {
           return (

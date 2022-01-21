@@ -15,16 +15,10 @@ span.sentence::first-letter {
 }
 ul.Synonyms {
   display: inline-block;
-  font-size: 10px;
+  font-size: 12px;
 }
 ul.Synonyms::first-letter {
   text-transform: capitalize;
-}
-
-.label {
-  opacity: 0.6;
-  color: black;
-  font-size: 20px;
 }
 
 .meanings {
@@ -36,11 +30,5 @@ ul.Synonyms::first-letter {
 h5 {
   font-size: 20px;
   margin-bottom: 25px;
-  color: black;
-}
-
-li {
-  list-style: 1.5;
-  font-size: 20px;
   color: black;
 }

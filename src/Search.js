@@ -27,23 +27,19 @@ export default function Search(props) {
   return (
     <div className="Search">
       <form onSubmit={handleSubmit}>
-        <div className="row">
-          <div className="col-11">
-            <input
-              type="search"
-              className="form-control"
-              spellCheck="true"
-              autoCorrect="on"
-              placeholder="Search a word..."
-              autoFocus="on"
-              onChange={textChange}
-            />
-          </div>
-          <div className="col-1">
-            <input type="submit" value="Search" className="btn btn-primary" />
-          </div>
-        </div>
+        <input
+          type="search"
+          className="form-control"
+          spellCheck="true"
+          autoCorrect="on"
+          placeholder="Search a word..."
+          autoFocus="on"
+          onChange={textChange}
+        />
       </form>
+      <div className="hint text-center">
+        Suggested words: sunset, heart, puzzle, etc.
+      </div>
       <Summary results={results} />
     </div>
   );
