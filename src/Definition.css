@@ -14,14 +14,7 @@ span.sentence {
 span.sentence::first-letter {
   text-transform: capitalize;
 }
-ul.Synonyms {
-  display: inline-block;
-  font-size: 13px;
-  margin-left: 40px;
-}
-ul.Synonyms::first-letter {
-  text-transform: capitalize;
-}
+
 h4.speech {
   display: inline-block;
   font-size: 30px;

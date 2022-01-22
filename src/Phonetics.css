@@ -1,3 +1,23 @@
 div.Phonetics {
   font-size: 20px;
 }
+
+img {
+  border-radius: 4px;
+  margin: 10px 0;
+}
+.Synonyms {
+  padding: 0;
+  margin: 0;
+}
+
+.Synonyms li {
+  display: inline-block;
+  margin: 0 6px;
+  color: black;
+  font-size: 15px;
+  margin-top: 8px;
+}
+.Synonyms li::first-letter {
+  text-transform: capitalize;
+}
