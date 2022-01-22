@@ -1,8 +1,9 @@
 .headword {
-  font-size: 55px;
+  font-size: 60px;
   display: inline-block;
   color: black;
-  margin-right: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: 25px;
 }
 .headword::first-letter {
   text-transform: capitalize;
@@ -15,16 +16,22 @@ span.sentence::first-letter {
 }
 ul.Synonyms {
   display: inline-block;
-  font-size: 12px;
+  font-size: 13px;
+  margin-left: 40px;
 }
 ul.Synonyms::first-letter {
   text-transform: capitalize;
 }
-
-.meanings {
-  font-size: 25px;
-  font-weight: 500;
+h4.speech {
+  display: inline-block;
+  font-size: 30px;
   color: black;
+  margin-top: 45px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+h4.speech::first-letter {
+  text-transform: capitalize;
 }
 
 h5 {

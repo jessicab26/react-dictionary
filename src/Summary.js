@@ -8,7 +8,7 @@ export default function Summary(props) {
   if (props.results) {
     return (
       <div className="Summary">
-        <span className="headword">{props.results.word}</span>
+        <h2 className="headword">{props.results.word}</h2>
         <Phonetics phonetics={props.results.phonetics} />
 
         {props.results.meanings.map(function (meaning, index) {
